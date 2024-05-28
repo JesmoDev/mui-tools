@@ -72,6 +72,22 @@ export class MuiWowStatsElement extends MUIComponent {
             <p>Mastery is different for every class, need more data</p>
           </div> -->
         </div>
+
+        <details>
+          <summary>Calculation Info</summary>
+          <p>Diminishing returns are based on these.</p>
+          <div>From 0 to 30%, there's no penalty.</div>
+          <div>From 30% to 39%, there's a 10% penalty.</div>
+          <div>From 39% to 47%, there's a 20% penalty.</div>
+          <div>From 47% to 54%, there's a 30% penalty.</div>
+          <div>From 54% to 66%, there's a 40% penalty.</div>
+          <div>From 66% to 126%, there's a 50% penalty.</div>
+          <br />
+          <p>Rating per percentage is based on these numbers</p>
+          <div>Haste: 170</div>
+          <div>Crit: 180</div>
+          <div>Versatility: 205</div>
+        </details>
       </div>
     `;
   }
@@ -123,6 +139,15 @@ export class MuiWowStatsElement extends MUIComponent {
     .stat-percent-symbol {
       font-size: 1rem;
       margin-left: 0.1rem;
+    }
+    details {
+      margin-top: 4rem;
+    }
+    summary {
+      text-align: center;
+    }
+    details[open] summary {
+      margin-bottom: 1rem;
     }
   `;
 }
