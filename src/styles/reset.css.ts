@@ -59,4 +59,8 @@ export const resetCSS = css`
   input[type="number"] {
     -moz-appearance: textfield;
   }
+  a {
+    text-decoration: none;
+    color: #ff8b3b;
+  }
 `;

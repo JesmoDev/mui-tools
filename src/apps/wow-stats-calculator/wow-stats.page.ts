@@ -80,8 +80,6 @@ export class MuiWowStatsElement extends MUIComponent {
     :host {
       display: flex;
       height: 100%;
-      background-color: #232323;
-      color: #d8d8d8;
 
       --border-radius: 0.25rem;
     }

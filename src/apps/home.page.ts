@@ -1,8 +1,9 @@
-import { LitElement, css, html } from "lit";
+import { css, html } from "lit";
 import { customElement } from "lit/decorators.js";
+import { MUIComponent } from "../component";
 
 @customElement("mui-home")
-export class MuiHomeElement extends LitElement {
+export class MuiHomeElement extends MUIComponent {
   render() {
     return html`
       <h1>This is a collection of small tools</h1>

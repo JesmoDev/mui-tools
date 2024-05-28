@@ -1,10 +1,11 @@
-import { LitElement, css, html } from "lit";
+import { css, html } from "lit";
 import { customElement } from "lit/decorators.js";
 import "./router";
 import { Route } from "./router";
+import { MUIComponent } from "./component";
 
 @customElement("mui-app")
-export class MuiAppElement extends LitElement {
+export class MuiAppElement extends MUIComponent {
   #routes: Route[] = [
     { path: "", component: "./apps/home.page.ts", elementName: "mui-home" },
     { path: "/wow-stats", component: "./apps/wow-stats-calculator/wow-stats.page.ts", elementName: "mui-wow-stats" },
@@ -30,12 +31,8 @@ export class MuiAppElement extends LitElement {
     nav {
       display: flex;
       gap: 1rem;
-      border-bottom: 1px solid black;
-    }
-
-    a {
-      text-decoration: none;
-      color: blue;
+      background-color: #000000;
+      padding: 0.5rem 1rem;
     }
   `;
 }
