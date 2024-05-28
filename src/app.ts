@@ -6,22 +6,33 @@ import { Route } from "./router";
 @customElement("mui-app")
 export class MuiAppElement extends LitElement {
   #routes: Route[] = [
-    { path: "", component: "./apps/home.ts", elementName: "mui-home" },
-    { path: "/about", component: "./apps/about.ts", elementName: "mui-about" },
-    { path: "/contact", component: "./apps/contact.ts", elementName: "mui-contact" },
+    { path: "", component: "./apps/home.page.ts", elementName: "mui-home" },
+    { path: "/wow-stats", component: "./apps/wow-stats-calculator/wow-stats.page.ts", elementName: "mui-wow-stats" },
   ];
 
   render() {
     return html`
-      <a href="/something">Something</a>
-      <a href="/about">About</a>
-      <a href="/contact">Contact</a>
+      <nav>
+        <a href="/wow-stats">WOW Stats</a>
+        <a href="/">Home</a>
+      </nav>
 
       <mui-router .routes=${this.#routes}></mui-router>
     `;
   }
 
-  static styles = css``;
+  static styles = css`
+    nav {
+      display: flex;
+      gap: 1rem;
+      border-bottom: 1px solid black;
+    }
+
+    a {
+      text-decoration: none;
+      color: blue;
+    }
+  `;
 }
 
 declare global {
