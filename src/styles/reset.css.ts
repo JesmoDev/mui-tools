@@ -55,4 +55,8 @@ export const resetCSS = css`
     -webkit-appearance: none;
     margin: 0;
   }
+  /* Hide the spin buttons in Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
 `;
