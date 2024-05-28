@@ -31,7 +31,8 @@ export class MuiAppElement extends MUIComponent {
     nav {
       display: flex;
       gap: 1rem;
-      background-color: #000000;
+      background-color: #121212;
+      border-bottom: 1px solid #121212;
       padding: 0.5rem 1rem;
     }
   `;

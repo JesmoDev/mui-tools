@@ -61,6 +61,6 @@ export const resetCSS = css`
   }
   a {
     text-decoration: none;
-    color: #ff8b3b;
+    color: #4280ff;
   }
 `;

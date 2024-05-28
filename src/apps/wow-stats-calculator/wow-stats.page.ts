@@ -98,7 +98,7 @@ export class MuiWowStatsElement extends MUIComponent {
       padding-block: 0.5rem;
       font-size: 1.5rem;
       text-align: center;
-      color: #d8d8d8;
+      color: inherit;
       border: 1px solid #ffffff25;
       background: none;
       border-radius: var(--border-radius);
