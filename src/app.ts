@@ -13,8 +13,8 @@ export class MuiAppElement extends LitElement {
   render() {
     return html`
       <nav>
-        <a href="/wow-stats">WOW Stats</a>
         <a href="/">Home</a>
+        <a href="/wow-stats">WOW Stats</a>
       </nav>
 
       <mui-router .routes=${this.#routes}></mui-router>
@@ -22,6 +22,11 @@ export class MuiAppElement extends LitElement {
   }
 
   static styles = css`
+    :host {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
     nav {
       display: flex;
       gap: 1rem;

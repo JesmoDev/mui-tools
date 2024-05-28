@@ -37,7 +37,11 @@ export class MuiRouterElement extends LitElement {
     return nothing;
   }
 
-  static styles = css``;
+  static styles = css`
+    :host {
+      height: 100%;
+    }
+  `;
 }
 
 declare global {
