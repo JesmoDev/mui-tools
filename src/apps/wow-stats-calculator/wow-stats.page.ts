@@ -85,10 +85,14 @@ export class MuiWowStatsElement extends MUIComponent {
 
       --border-radius: 0.25rem;
     }
+    h1 {
+      text-align: center;
+    }
     #main {
       max-width: 800px;
       margin-inline: auto;
       margin-top: min(4rem, 10dvh);
+      padding: 24px;
     }
     #rating-input {
       margin-top: 2rem;
