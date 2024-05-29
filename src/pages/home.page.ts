@@ -8,7 +8,7 @@ export class MuiHomeElement extends MUIComponent {
     return html`
       <h1>This is a collection of small tools</h1>
       <ul>
-        <li><a href="/wow-stats">WoW Stats Calculator</a></li>
+        <li><a href="wow-stats">WoW Stats Calculator</a></li>
       </ul>
     `;
   }

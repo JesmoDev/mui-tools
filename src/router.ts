@@ -22,7 +22,8 @@ export class MuiRouterElement extends LitElement {
   }
 
   async #init() {
-    const currentPath = window.location.pathname;
+    const base = "/mui-tools/";
+    const currentPath = window.location.pathname.replace(base, "");
     const matchedRoute = this.routes.find((route) => route.path === currentPath) || this.routes.find((route) => route.path === "");
 
     if (!matchedRoute) {

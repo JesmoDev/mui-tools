@@ -8,14 +8,14 @@ import { MUIComponent } from "./component";
 export class MuiAppElement extends MUIComponent {
   #routes: Route[] = [
     { path: "", component: () => import("./pages/home.page.ts"), elementName: "mui-home" },
-    { path: "/wow-stats", component: () => import("./pages/wow-stats-calculator/wow-stats.page.ts"), elementName: "mui-wow-stats" },
+    { path: "wow-stats", component: () => import("./pages/wow-stats-calculator/wow-stats.page.ts"), elementName: "mui-wow-stats" },
   ];
 
   render() {
     return html`
       <nav>
         <a href="/">Home</a>
-        <a href="/wow-stats">WOW Stats</a>
+        <a href="wow-stats">WOW Stats</a>
       </nav>
 
       <mui-router .routes=${this.#routes}></mui-router>
