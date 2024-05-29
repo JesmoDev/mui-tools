@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 
 export type Route = {
   path: string;
-  component: string;
+  component: Function;
   elementName: string;
 };
 
@@ -18,6 +18,10 @@ export class MuiRouterElement extends LitElement {
   connectedCallback(): void {
     super.connectedCallback();
 
+    this.#init();
+  }
+
+  async #init() {
     const currentPath = window.location.pathname;
     const matchedRoute = this.routes.find((route) => route.path === currentPath) || this.routes.find((route) => route.path === "");
 
@@ -25,7 +29,7 @@ export class MuiRouterElement extends LitElement {
       return;
     }
 
-    import(matchedRoute.component);
+    await matchedRoute.component();
 
     if (!this.shadowRoot) return;
 

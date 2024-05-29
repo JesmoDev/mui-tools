@@ -10,7 +10,6 @@ export class MuiWowStatsElement extends MUIComponent {
 
   #hasteRatingPerPercent = 170;
   #critRatingPerPercent = 180;
-  #masteryRatingPerPercent = 24;
   #versaRatingPerPercent = 205;
 
   #ratingToPercent(rating: number, ratingPerPercent: number) {
@@ -67,10 +66,6 @@ export class MuiWowStatsElement extends MUIComponent {
             <p>Versatility</p>
             <p>${this.#ratingToPercent(this.#rating, this.#versaRatingPerPercent).toFixed(2)}<span class="stat-percent-symbol">%</span></p>
           </div>
-          <!-- <div class="stat">
-            <p>Mastery</p>
-            <p>Mastery is different for every class, need more data</p>
-          </div> -->
         </div>
 
         <details>

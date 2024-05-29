@@ -7,8 +7,8 @@ import { MUIComponent } from "./component";
 @customElement("mui-app")
 export class MuiAppElement extends MUIComponent {
   #routes: Route[] = [
-    { path: "", component: "./apps/home.page.ts", elementName: "mui-home" },
-    { path: "/wow-stats", component: "./apps/wow-stats-calculator/wow-stats.page.ts", elementName: "mui-wow-stats" },
+    { path: "", component: () => import("./pages/home.page.ts"), elementName: "mui-home" },
+    { path: "/wow-stats", component: () => import("./pages/wow-stats-calculator/wow-stats.page.ts"), elementName: "mui-wow-stats" },
   ];
 
   render() {
